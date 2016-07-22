@@ -35,14 +35,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GzU-mp-kT0">
-                                        <rect key="frame" x="8" y="97" width="100" height="100"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="MEL-9e-Zu7"/>
-                                            <constraint firstAttribute="width" constant="100" id="T1H-EP-yrK"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3r-Yd-9J0">
                                         <rect key="frame" x="234" y="62" width="119" height="25"/>
                                         <constraints>
@@ -175,9 +167,18 @@
                                             <constraint firstAttribute="height" constant="83" id="zHc-hE-b45"/>
                                         </constraints>
                                     </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GzU-mp-kT0">
+                                        <rect key="frame" x="8" y="97" width="100" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="MEL-9e-Zu7"/>
+                                            <constraint firstAttribute="width" constant="100" id="T1H-EP-yrK"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="pIW-Lw-PRV" firstAttribute="top" secondItem="tTW-OO-xFM" secondAttribute="top" constant="8" id="2ol-xa-Nr7"/>
                                     <constraint firstItem="T3r-Yd-9J0" firstAttribute="centerX" secondItem="tTW-OO-xFM" secondAttribute="centerX" constant="-6.5" id="5I1-dy-shw"/>
                                     <constraint firstItem="GzU-mp-kT0" firstAttribute="top" secondItem="T3r-Yd-9J0" secondAttribute="bottom" constant="10" id="6Gn-wH-i00"/>
                                     <constraint firstItem="ToG-Jv-urb" firstAttribute="top" secondItem="T3r-Yd-9J0" secondAttribute="bottom" constant="10" id="7HP-d5-3Fg"/>
@@ -193,7 +194,6 @@
                                     <constraint firstAttribute="trailing" secondItem="9jp-To-AEC" secondAttribute="trailing" constant="8" id="Xfo-eG-ZgL"/>
                                     <constraint firstItem="U6q-MM-cEV" firstAttribute="centerX" secondItem="tTW-OO-xFM" secondAttribute="centerX" constant="1" id="rnJ-2m-IF3"/>
                                     <constraint firstItem="GzU-mp-kT0" firstAttribute="top" secondItem="T3r-Yd-9J0" secondAttribute="top" id="tHr-G7-CJ5"/>
-                                    <constraint firstItem="pIW-Lw-PRV" firstAttribute="top" secondItem="tTW-OO-xFM" secondAttribute="top" constant="8" id="tpz-ca-kYb"/>
                                     <constraint firstItem="T3r-Yd-9J0" firstAttribute="top" secondItem="U6q-MM-cEV" secondAttribute="bottom" constant="5" id="tzq-RS-htE"/>
                                     <constraint firstItem="U6q-MM-cEV" firstAttribute="top" secondItem="pIW-Lw-PRV" secondAttribute="bottom" constant="5" id="uPO-rK-tIe"/>
                                     <constraint firstItem="r9p-rd-wOF" firstAttribute="centerX" secondItem="tTW-OO-xFM" secondAttribute="centerX" id="zGG-Qk-hgL"/>
@@ -204,45 +204,39 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <searchBar contentMode="redraw" placeholder="Enter location" translatesAutoresizingMaskIntoConstraints="NO" id="7nY-xo-6Kc">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSJ-wR-ihq">
+                                <rect key="frame" x="0.0" y="34" width="600" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="kJf-rY-BVz"/>
+                                    <constraint firstAttribute="height" constant="30" id="IZH-Np-QqZ"/>
                                 </constraints>
-                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </searchBar>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tTW-OO-xFM" firstAttribute="top" secondItem="7nY-xo-6Kc" secondAttribute="bottom" id="6lf-ls-q1R"/>
                             <constraint firstItem="Svo-DW-vvV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CTM-xc-nTI"/>
                             <constraint firstAttribute="trailing" secondItem="tTW-OO-xFM" secondAttribute="trailing" id="ORs-w0-pXM"/>
+                            <constraint firstItem="VSJ-wR-ihq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PpG-ei-ZEg"/>
                             <constraint firstItem="tTW-OO-xFM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RJf-TL-24Z"/>
+                            <constraint firstItem="tTW-OO-xFM" firstAttribute="top" secondItem="VSJ-wR-ihq" secondAttribute="bottom" id="T1M-0T-SyX"/>
                             <constraint firstItem="Svo-DW-vvV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ydr-9k-4Pd"/>
+                            <constraint firstAttribute="trailing" secondItem="VSJ-wR-ihq" secondAttribute="trailing" id="a4E-33-0W6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Svo-DW-vvV" secondAttribute="bottom" id="eZf-yC-uT4"/>
-                            <constraint firstAttribute="trailing" secondItem="7nY-xo-6Kc" secondAttribute="trailing" id="hf0-1V-xG0"/>
-                            <constraint firstItem="Svo-DW-vvV" firstAttribute="top" secondItem="7nY-xo-6Kc" secondAttribute="bottom" id="ix1-q6-jn5"/>
                             <constraint firstItem="tTW-OO-xFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jzI-sQ-IRA"/>
-                            <constraint firstItem="7nY-xo-6Kc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="kWy-R8-TDL"/>
                             <constraint firstAttribute="trailing" secondItem="Svo-DW-vvV" secondAttribute="trailing" id="pJz-XB-meV"/>
-                            <constraint firstItem="7nY-xo-6Kc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vY7-Ah-K9r"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tTW-OO-xFM" secondAttribute="bottom" id="yXq-2E-4Bb"/>
+                            <constraint firstItem="VSJ-wR-ihq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="zpY-bi-KN4"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ix1-q6-jn5"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
+                        <outlet property="SearchFielf" destination="VSJ-wR-ihq" id="dzf-88-CMq"/>
                         <outlet property="barometerLb" destination="Vl5-3p-MbI" id="y3F-5g-Uvx"/>
                         <outlet property="currentDate" destination="U6q-MM-cEV" id="IkN-3W-Pxt"/>
                         <outlet property="currentLocation" destination="pIW-Lw-PRV" id="sCW-3r-YJV"/>
                         <outlet property="currentWeatherIcon" destination="GzU-mp-kT0" id="vaB-bD-2UA"/>
                         <outlet property="currentWeekDay" destination="T3r-Yd-9J0" id="zOp-yz-edK"/>
                         <outlet property="humidityLb" destination="zjl-Hw-qAm" id="3Tz-vp-NdB"/>
-                        <outlet property="locationSearchBar" destination="7nY-xo-6Kc" id="n7H-dD-jX8"/>
                         <outlet property="mainView" destination="tTW-OO-xFM" id="486-Iy-cbw"/>
                         <outlet property="sunriseTimeLb" destination="WkL-Dr-SfB" id="9lh-3J-cCU"/>
                         <outlet property="sunsetTimeLb" destination="GjA-oY-ZX8" id="UJA-D1-RC2"/>
